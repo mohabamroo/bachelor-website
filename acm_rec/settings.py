@@ -30,7 +30,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     '127.0.0.1',
     'localhost',
-    'bachelor-code.herokuapp.com'
+    'https://acm-recommender.herokuapp.com/'
 ]
 
 
