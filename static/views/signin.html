@@ -1,0 +1,15 @@
+<!doctype html>
+<form method="post" name="userForm" ng-submit="login(userForm.$valid)">
+    <fieldset>
+        <legend>Sign In</legend>
+        <div class="form-group">
+            <label for="exampleInputUsername1">Username</label>
+            <input class="form-control" id="exampleInputUsername1" aria-describedby="emailHelp" ng-model="user.username" placeholder="mohabamroo" type="text" required>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input class="form-control" id="exampleInputPassword1" placeholder="******" ng-model="user.password" type="password" required>
+        </div>
+        <button type="submit" class="btn btn-primary" ng-disabled="userForm.$invalid">Submit</button>
+    </fieldset>
+</form>

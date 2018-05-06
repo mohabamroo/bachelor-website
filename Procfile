@@ -1,0 +1,1 @@
+web: gunicorn acm_rec.wsgi --log-file -

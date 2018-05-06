@@ -1,0 +1,39 @@
+<!doctype html>
+
+<div ng-init="getRecommendations();">
+    <h2>Recommendations</h2>
+    <p>Click on the button to get personalized reommendations, according to your ranking and previously solved problems</p>
+    <!-- <div class="container recommendationBtn">
+        <button type="button" class="btn btn-primary btn-lg btn-block" ng-click="getRecommendations();">Generate Recommendations</button>
+    </div> -->
+    <div class="container-fluid">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">ID</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Solved</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="table-light" ng-repeat="problem in problems">
+                    <td>{{$index + 1}}</td>
+                    <td>
+                        {{problem.id}}
+                    </td>
+                    <td>
+                        <a href="{{codeforcesRoot + problem.link}}" target="_blank">
+                            {{problem.title}}
+                        </a>
+                    </td>
+                    <td>
+                        <a href="{{codeforcesRoot + problem.status_link}}" target="_blank">
+                            {{problem.solved_times}}
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
